@@ -1,0 +1,34 @@
+class Solution {
+    int maxSubarraySum(int[] arr) {
+        // Code here
+        
+        int maxi=0;int sum=0;
+        for(int i=0;i<arr.length;i++){
+            if(sum+arr[i]>0){
+                sum+=arr[i];
+            }
+            else{
+                sum=0;
+            }
+        
+            
+             maxi=Math.max(maxi,sum);
+            
+            
+          
+            
+        }
+        if(maxi==0){
+            int high=arr[0];
+            for(int i=1;i<arr.length;i++){
+                if(arr[i]>high){
+                    high=arr[i];
+                }
+            }
+            return high;
+        }
+       
+        return maxi;
+        
+    }
+}
