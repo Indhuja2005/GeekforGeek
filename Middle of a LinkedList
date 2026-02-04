@@ -1,0 +1,30 @@
+/*
+class Node {
+    int data;
+    Node next;
+
+    Node(int x) {
+        data = x;
+        next = null;
+    }
+} */
+
+class Solution {
+    int getMiddle(Node head) {
+        // code here
+        if(head==null) return 0;
+        Node temp=head;int count=1;
+        while(temp.next!=null){
+            count++;
+            temp=temp.next;
+        }
+        Node val=head;
+        
+        for(int i=0;i<(count/2);i++){
+            val=val.next;
+        }
+        
+       
+        return val.data;
+    }
+}
