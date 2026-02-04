@@ -1,0 +1,15 @@
+class Solution {
+    public static ArrayList<Integer> findUnion(int[] a, int[] b) {
+        // code here
+        ArrayList<Integer> ans=new ArrayList<>();
+        Set<Integer> res=new TreeSet<>();
+        for(int i:a){
+            res.add(i);
+        }
+        for(int j:b){
+            res.add(j);
+        }
+        ans.addAll(res);
+        return ans;
+    }
+}
