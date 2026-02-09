@@ -1,0 +1,18 @@
+class Solution {
+    ArrayList<Integer> removeDuplicates(int[] arr) {
+        // code here
+        Set<Integer> s=new HashSet<>();
+        ArrayList<Integer> ans=new ArrayList<>();
+        for(int data:arr){
+            if(!ans.contains(data)){
+                ans.add(data);
+            }
+            
+        }
+        // for(int val:s){
+        //     ans.add(val);
+        // }
+        // Collections.sort(ans);
+        return ans;
+    }
+}
